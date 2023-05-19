@@ -1,4 +1,5 @@
 import type { V2_MetaFunction } from "@remix-run/node";
+import Banner from "../components/Banner";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -16,5 +17,17 @@ export const meta: V2_MetaFunction = () => {
 };
 
 export default function Index() {
-  return <div></div>;
+  return (
+    <div className="min-h-screen pb-20 pt-[72px]">
+      <div
+        data-testid="landing-page"
+        className="flex flex-col items-center scroll-smooth"
+      >
+        <Banner />
+        <section>Features</section>
+        <section>CTA</section>
+        <footer>footer</footer>
+      </div>
+    </div>
+  );
 }
