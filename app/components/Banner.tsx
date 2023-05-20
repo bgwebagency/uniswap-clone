@@ -1,10 +1,13 @@
 import { Link } from "@remix-run/react";
 
-const Banner = () => {
+const Banner = ({ onLearnMoreClick }: { onLearnMoreClick: () => void }) => {
   return (
     <>
       {/* Clickable Swap Link */}
-      <div className="z-[1] px-2 pt-[63px]" data-testid="clickable-swap-link">
+      <div
+        className="z-[1] h-[calc(100vh-52px)] px-2 pt-[63px]"
+        data-testid="clickable-swap-link"
+      >
         <Link to="/swap">
           <div className="h-[323px] w-[464px] rounded-2xl bg-black"></div>
         </Link>
@@ -36,7 +39,10 @@ const Banner = () => {
         >
           Get started
         </Link>
-        <div className="mt-9 flex items-center text-xl font-semibold text-uns-blue-6">
+        <div
+          className="mt-9 flex cursor-pointer items-center text-xl font-semibold text-uns-blue-6"
+          onClick={onLearnMoreClick}
+        >
           Learn more
           <svg
             xmlns="http://www.w3.org/2000/svg"

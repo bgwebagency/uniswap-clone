@@ -13,6 +13,11 @@ export default {
         "uns-blue-4": "#080a18",
         "uns-blue-5": "#a697ff00",
         "uns-blue-6": "#5d6785",
+        "uns-blue-7": "#050026",
+        "uns-blue-8": "#3335480a",
+        "uns-blue-9": "#293249",
+        "uns-blue-10": "#0d111c",
+        "uns-sky": "#4c82fb",
         "uns-pink-1": "#ff37eb",
         "uns-pink-2": "rgb(255, 87, 218)",
         "uns-pink-3": "#ff00c7",
@@ -24,6 +29,10 @@ export default {
       },
       boxShadow: {
         glow: "0 0 16px 0 var(--tw-shadow-color)",
+        features: "0 10px 24px 0 var(--tw-shadow-color)",
+      },
+      backgroundSize: {
+        "auto-hundred": "auto 100%",
       },
     },
   },
