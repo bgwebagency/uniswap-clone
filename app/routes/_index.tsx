@@ -2,6 +2,7 @@ import type { V2_MetaFunction } from "@remix-run/node";
 import Banner from "../components/Banner";
 import Features from "../components/Features";
 import { useRef } from "react";
+import CTA from "../components/CTA";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -34,7 +35,7 @@ export default function Index() {
         <Banner onLearnMoreClick={scrollToFeatures} />
         <div className="flex w-full  flex-col items-center from-black from-[0.16%] to-uns-blue-7 to-[99.85%] bg-gradient-[179.82deg] md:px-24 md:pb-20">
           <Features ref={ref} />
-          <section>CTA</section>
+          <CTA />
           <footer>footer</footer>
         </div>
       </div>
