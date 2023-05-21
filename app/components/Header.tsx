@@ -1,13 +1,23 @@
 import { NavLink, useNavigate } from "@remix-run/react";
 import clsx from "clsx";
 import Dropdown from "./Dropdown";
+import type { selectedNetwork } from "./NetworkDropdown";
+import NetworkDropdown from "./NetworkDropdown";
+import { useContext } from "react";
+import { NetworkContext } from "../context/NetworkProvider";
 
 const Header = () => {
   const navigate = useNavigate();
+  const { network, setNetwork } = useContext(NetworkContext);
 
   const handleLogoClick = () => {
     // navigate to root
     navigate("/");
+  };
+
+  const onNetworkChange = (network: selectedNetwork) => {
+    // update network context
+    setNetwork(network);
   };
 
   return (
@@ -79,6 +89,10 @@ const Header = () => {
             />
           </div>
           <div className=" flex shrink grow justify-end self-center">
+            <NetworkDropdown
+              selectedNetwork={network}
+              onClick={onNetworkChange}
+            />
             Right Nav Items
           </div>
         </div>

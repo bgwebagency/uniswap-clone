@@ -13,6 +13,8 @@ import {
 import { getUser } from "~/session.server";
 import stylesheet from "~/tailwind.css";
 import Header from "./components/Header";
+import { NetworkContext } from "./context/NetworkProvider";
+import { useContext, useMemo, useState } from "react";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -24,6 +26,10 @@ export const loader = async ({ request }: LoaderArgs) => {
 };
 
 export default function App() {
+  const [network, setNetwork] = useState("ethereum");
+  const value = useMemo(() => ({ network, setNetwork }), [network, setNetwork]);
+  console.log(network);
+
   return (
     <html lang="en" className="h-full bg-uns-blue text-base text-white">
       <head>
@@ -34,7 +40,10 @@ export default function App() {
       </head>
       <body className="h-full">
         <Header />
-        <Outlet />
+        {/* @ts-ignore */}
+        <NetworkContext.Provider value={value}>
+          <Outlet />
+        </NetworkContext.Provider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
