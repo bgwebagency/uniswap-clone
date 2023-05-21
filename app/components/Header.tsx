@@ -1,5 +1,6 @@
 import { NavLink, useNavigate } from "@remix-run/react";
 import clsx from "clsx";
+import Dropdown from "./Dropdown";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ const Header = () => {
     <div className="fixed top-0 z-[1000] flex w-full flex-row flex-nowrap justify-between">
       <nav className="z-[2] h-[72px] w-full px-3 py-5">
         <div className="flex h-full flex-nowrap align-[initial]">
+          {/* left nav items */}
           <div className="flex shrink grow items-center  justify-start align-[initial]">
             <div className="mr-3 cursor-pointer" onClick={handleLogoClick}>
               <svg
@@ -30,7 +32,7 @@ const Header = () => {
                 ></path>
               </svg>
             </div>
-            <div className="flex">
+            <div className="flex items-center">
               <NavLink
                 to="/"
                 className={({
@@ -66,6 +68,7 @@ const Header = () => {
               >
                 Pools
               </NavLink>
+              <Dropdown />
             </div>
           </div>
           <div className="flex h-full shrink grow justify-center self-center">

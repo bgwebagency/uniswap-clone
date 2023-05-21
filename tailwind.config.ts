@@ -6,6 +6,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        "uns-gray-1": "#00000026",
         "uns-blue": "#131a2a",
         "uns-light-blue": "#98a1c0",
         "uns-blue-gray": "#99a1bd14",
@@ -17,6 +18,7 @@ export default {
         "uns-blue-8": "#3335480a",
         "uns-blue-9": "#293249",
         "uns-blue-10": "#0d111c",
+        "uns-blue-11": "#2B3249",
         "uns-sky": "#4c82fb",
         "uns-pink-1": "#ff37eb",
         "uns-pink-2": "rgb(255, 87, 218)",
@@ -32,6 +34,7 @@ export default {
         glow: "0 0 16px 0 var(--tw-shadow-color)",
         features: "0 10px 24px 0 var(--tw-shadow-color)",
         cta: "0 10px 24px var(--tw-shadow-color)",
+        dropdown: "0 4px 12px 0 var(--tw-shadow-color)",
       },
       backgroundSize: {
         "auto-hundred": "auto 100%",
