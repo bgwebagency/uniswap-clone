@@ -19,6 +19,7 @@ export default {
         "uns-blue-9": "#293249",
         "uns-blue-10": "#0d111c",
         "uns-blue-11": "#2B3249",
+        "uns-blue-12": "#4c82fb3d",
         "uns-sky": "#4c82fb",
         "uns-pink-1": "#ff37eb",
         "uns-pink-2": "rgb(255, 87, 218)",
