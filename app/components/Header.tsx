@@ -11,12 +11,10 @@ const Header = () => {
   const { network, setNetwork } = useContext(NetworkContext);
 
   const handleLogoClick = () => {
-    // navigate to root
     navigate("/");
   };
 
   const onNetworkChange = (network: selectedNetwork) => {
-    // update network context
     setNetwork(network);
   };
 
