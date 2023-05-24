@@ -86,12 +86,14 @@ const Header = () => {
               className="h-full w-full"
             />
           </div>
-          <div className=" flex shrink grow justify-end self-center">
-            <NetworkDropdown
-              selectedNetwork={network}
-              onClick={onNetworkChange}
-            />
-            Right Nav Items
+          <div className="flex shrink grow justify-end self-center">
+            <div className="flex items-center gap-3">
+              <NetworkDropdown
+                selectedNetwork={network}
+                onClick={onNetworkChange}
+              />
+              Right Nav Items
+            </div>
           </div>
         </div>
       </nav>

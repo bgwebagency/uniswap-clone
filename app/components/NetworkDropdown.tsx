@@ -57,39 +57,32 @@ export default function NetworkDropdown({
   selectedNetwork,
   onClick,
 }: NetworkDropdownProps) {
+  const netowrkImgUrl = NETWORKS.find(
+    (network) => network.network === selectedNetwork
+  )?.imgUrl;
+
   return (
-    <div className="mt-1 sm:mt-0">
+    <div className="hidden sm:flex">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className=" flex h-10 w-10 items-center justify-center rounded-xl text-uns-light-blue transition duration-[250ms] hover:bg-uns-blue-gray">
+          <Menu.Button className=" flex h-10 w-[60px] items-center justify-center gap-2 rounded-lg text-uns-light-blue transition duration-[250ms] hover:bg-uns-blue-gray">
+            <img
+              src={netowrkImgUrl}
+              alt={selectedNetwork}
+              className="h-5 w-5 max-w-none"
+            />
             <svg
-              fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              width="24"
-              height="24"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#98A1C0"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              <path
-                d="M10 10.8334C10.4603 10.8334 10.8334 10.4603 10.8334 10C10.8334 9.53978 10.4603 9.16669 10 9.16669C9.5398 9.16669 9.16671 9.53978 9.16671 10C9.16671 10.4603 9.5398 10.8334 10 10.8334Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-              <path
-                d="M15.8334 10.8334C16.2936 10.8334 16.6667 10.4603 16.6667 10C16.6667 9.53978 16.2936 9.16669 15.8334 9.16669C15.3731 9.16669 15 9.53978 15 10C15 10.4603 15.3731 10.8334 15.8334 10.8334Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-              <path
-                d="M4.16671 10.8334C4.62694 10.8334 5.00004 10.4603 5.00004 10C5.00004 9.53978 4.62694 9.16669 4.16671 9.16669C3.70647 9.16669 3.33337 9.53978 3.33337 10C3.33337 10.4603 3.70647 10.8334 4.16671 10.8334Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
+              <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </Menu.Button>
         </div>
